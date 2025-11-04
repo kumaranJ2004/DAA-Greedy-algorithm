@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(){
+    int c,ch;
+    scanf("%d",&c);
+    int s[c];
+    for(int i=0;i<c;i++){
+        scanf("%d",&s[i]);
+    }
+    scanf("%d",&ch);
+    int g[ch];
+    for(int j=0;j<ch;j++){
+        scanf("%d",&g[j]);
+    }
+    int i=0,j=0,n=0;
+    while(i<c&&j<ch){
+        if(g[j]>=s[i]){
+            n++;
+            i++;
+            j++;
+        }else{
+            j++;
+        }
+    }
+    printf("%d",n);
+    
+}
